@@ -6,7 +6,7 @@ Main functions:
 * Color Harmonization 
 * Gallery of Style Transfer.
  
-For a live [Demo](https://computationalartstudio.herokuapp.com/) has been deployed to Heroku.
+[A Live Demo](https://computationalartstudio.herokuapp.com/) has been deployed to Heroku.
 Please try it out, and have fun.
  
 ## Getting started
