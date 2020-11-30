@@ -11,6 +11,7 @@ ALLOWED_EXTENSIONS = set(['.png','.jpg','.jpeg','.gif'])
 
 @colorhar_page.route('/colorhar', methods=['GET', 'POST'])
 def colorhar():
+    # Render jumbotron in both GET and POST request. 
     kwargs = {
         'title': 'Color Harmonization',
         'jumbotron': {
@@ -19,11 +20,14 @@ def colorhar():
             "text": "Research paper:https://igl.ethz.ch/projects/color-harmonization/harmonization.pdf"
         }
     }
-
+    
     if request.method == 'GET':
         return render_template('colorhar.html', **kwargs)
+    # Harmonize photos of user upload
     elif request.method == 'POST':
+        # Folder to store upload images to local
         uploads_dir = "static/colorhar_results/uploads/"
+        # Folder to store processed images to local
         results_dir = "static/colorhar_results/results/"
 
         # create image directory if not found
@@ -52,10 +56,12 @@ def colorhar():
 
         # pass path of result image to template
         image_fpath_harmonized = os.path.join(results_dir, filename)
+        # Append result_image_path to Kwargs
         kwargs['result_image_name']= image_fpath_harmonized
 
-        # pass harmony score to templage: the lower the harmony score, the more the image is harmony.
+        # pass harmony score to templage: the lower the harmony score, the more harmony the color is .
         har_result = harmonize_image(destination, image_fpath_harmonized)
+        # append har_result to Kwargs
         kwargs.update(har_result)
 
         return render_template('colorhar.html', **kwargs)

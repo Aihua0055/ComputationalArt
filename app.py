@@ -22,7 +22,7 @@ config = {
     "appId": "1:213787329993:web:4b6220c697de9ad4c75418"
 }
 
-# FLASK_ENV=development FLASK_APP=app.py python -m flask run
+# Get started in development mode: FLASK_ENV=development FLASK_APP=app.py python -m flask run
 firebase = pyrebase.initialize_app(config)
 
 # Firebase storage for Style Transfer.
@@ -32,6 +32,7 @@ storage = firebase.storage()
 @app.route('/')
 @app.route('/home')
 def home():
+    # Kwargs store data to render on template
     kwargs = {
         'title': 'Home',
         'jumbotron': {
