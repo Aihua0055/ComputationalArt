@@ -38,16 +38,17 @@ If successful, you will be able to preview your uploaded image on the same page.
 Report any issue to the GitHub issue tracker.
  
 ## Thanks
-Image-api [link](https://github.com/gxercavins/image-api)
-Deep AI: https://deepai.org/machine-learning-model/fast-style-transfer
-Flask official documentation
-Jinja2 documentation
-Bootstrap
+* [image-api](https://github.com/gxercavins/image-api)
+* [Deep AI](https://deepai.org/machine-learning-model/fast-style-transfer)
+* [Flask official documentation](https://flask.palletsprojects.com/en/1.1.x/)
+* [Jinja2 documentation](https://jinja.palletsprojects.com/en/2.11.x/)
+* [Bootstrap](https://getbootstrap.com/)
+* Feng Liu and Qiqi Hou for exposure author to Color Harmonization
  
 ## Inspiration
-Google Arts & Culture [link](https://artsandculture.google.com/)
-How old do I look [link](https:www.how-old.net/)
-Make Me zombie [link](http://makemezombie.com/)
+[Google Arts & Culture](https://artsandculture.google.com/)
+[How old do I look](https:www.how-old.net/)
+[Make Me zombie](http://makemezombie.com/)
  
  
  
