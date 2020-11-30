@@ -1,5 +1,10 @@
 # Computational Art Studio
-Computational Art Studio written in Python, using Flask framework and Deep AI style transfer API for image processing: 1. Style Transfer 2. Color Harmonization 3. Gallery of Style Transfer.
+Computational Art Studio written in Python.Use Flask as web Framework.Use Deep AI style transfer API for Style Transfer.
+
+Main functions:
+* 1. Style Transfer 
+* 2. Color Harmonization 
+* 3. Gallery of Style Transfer.
  
 For a live demo, please visit this 
 [link](https://computationalartstudio.herokuapp.com/). The App has been deployed to Heroku.
