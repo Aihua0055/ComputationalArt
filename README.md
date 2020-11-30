@@ -6,8 +6,8 @@ Main functions:
 * Color Harmonization 
 * Gallery of Style Transfer.
  
-For a live demo, please visit this 
-[link](https://computationalartstudio.herokuapp.com/). The App has been deployed to Heroku.
+For a live [Demo](https://computationalartstudio.herokuapp.com/) has been deployed to Heroku.
+Please try it out, and have fun.
  
 ## Getting started
 This project includes three Python files:
