@@ -43,9 +43,7 @@ If successful, you will be able to preview your uploaded image on the same page.
 * For Style transfer, you will see a button show up along with your uploaded image, and then you can click on that button, and after about 15 seconds, you will see the result image(Your uploaded image in Van Gogh Starry Night style).
  
 * In the Gallery page, you will see 30 pokemon images in Van Gogh Starry Night style.
- 
-## Issues
-Report any issue to the GitHub issue tracker.
+
  
 ## Thanks
 * [image-api](https://github.com/gxercavins/image-api)
@@ -59,6 +57,9 @@ Report any issue to the GitHub issue tracker.
 * [Google Arts & Culture](https://artsandculture.google.com/)
 * [How old do I look](https:www.how-old.net/)
 * [Make Me zombie](http://makemezombie.com/)
+
+## Issues
+Report any issue to the GitHub issue tracker.
  
  
  
