@@ -1,45 +1,53 @@
 {% extends "base.html" %}
+<!-- Current active page is colorhar.html, font will show as active -->
 {% set active_page = "colorhar" %}
+<!-- Read title from color.py -->
 {% block title %} {{title}} {% endblock %}
 
 {% block content %}
 
     <div class="container">
 
-    <form id="upload-form" action="{{ url_for('colorhar_page.colorhar') }}" method="POST" enctype="multipart/form-data">
-        <div class = "input-group">
-            <div class  = "input-group-prepend">
-                <span class = "input-group-text" id = "inputGroupFile">Harmonize my own photo</span>
-            </div>
-            <div class = "custom-file">
-                <input type = "file" name = "file" accept="image/*" onchange="this.form.submit()" class = "custom-file-input" id = "file-picker" aria-describedby="inputGroupFile">
-                <label class = "custom-file-label" for="file-picker">Upload your file</label>
-            </div>
-        </div>
-    </form>
-
-    {% if result_image_name %}
-        <div class = "row">
-            <div class="col-sm-6">
-                <div class = "card align-items-center border-0 h-100">
-                 <img class="card-img-top h-75" src ="{{image_name}}" alt="Country Flag">
-                <div class="card-body text-center">
-                    <h4 class = "card-title">Before </h4>
-                    <p>Harmony Score:{{score_orig}}</p>
+        <!-- Form for user to upload image for color harmonization -->
+        <form id="upload-form" action="{{ url_for('colorhar_page.colorhar') }}" method="POST" enctype="multipart/form-data">
+            <div class = "input-group">
+                <div class  = "input-group-prepend">
+                    <span class = "input-group-text" id = "inputGroupFile">Harmonize my own photo</span>
                 </div>
+                <div class = "custom-file">
+                    <input type = "file" name = "file" accept="image/*" onchange="this.form.submit()" class = "custom-file-input" id = "file-picker" aria-describedby="inputGroupFile">
+                    <label class = "custom-file-label" for="file-picker">Upload your file</label>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class = "card align-items-center border-0 h-100">
-                 <img class="card-img-top h-75" src ="{{result_image_name}}" alt="Country Flag">
-                <div class="card-body text-center">
-                    <h4 class = "card-title">After </h4>
-                    <p>Harmony Score:{{score}} </p>
+        </form>
+        
+        <!-- <div id="colorHarmonizing" class="spinner-border text-success" ></div> -->
+        
+        {% if result_image_name %}
+        
+            <div class = "row">
+                <!-- Show Original image user uploads -->
+                <div class="col-sm-6">
+                    <div class = "card align-items-center border-0 h-100">
+                    <img class="card-img-top h-75" src ="{{image_name}}" alt="Country Flag">
+                    <div class="card-body text-center">
+                        <h4 class = "card-title">Before </h4>
+                        <p>Harmony Score:{{score_orig}}</p>
+                    </div>
+                    </div>
                 </div>
+                <!-- Show harmonized image -->
+                <div class="col-sm-6">
+                    <div class = "card align-items-center border-0 h-100">
+                    <img class="card-img-top h-75" src ="{{result_image_name}}" alt="Country Flag">
+                    <div class="card-body text-center">
+                        <h4 class = "card-title">After </h4>
+                        <p>Harmony Score:{{score}} </p>
+                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endif %}
-
+        {% endif %}
     </div>
+
 {% endblock %}

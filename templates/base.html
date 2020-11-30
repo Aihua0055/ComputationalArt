@@ -28,14 +28,15 @@
             {% set navbar_menus = [ ('/', 'home', 'Home'), ('/colorhar',
             'colorhar', 'Color Harmonization'), ('/styletransfer',
             'styletransfer', 'Style Transfer'), ('/gallery', 'gallery',
-            'Gallery'), ('/about', 'about', 'About'), ] -%} {% set active_page =
-            active_page|default('home') -%} {% for href, id, caption in
-            navbar_menus %}
-            <li class="nav-item">
-              <a
-                class="nav-link {% if id == active_page %} active {% endif%}"
-                href="{{ href }}"
-              >
+            'Gallery'), ('/about', 'about', 'About'), ] -%} 
+            <!-- Set active page to style active menu automatically -->
+            {% set active_page = active_page|default('home') -%} 
+            {% for href, id, caption in navbar_menus %}
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if id == active_page %} active {% endif%}"
+                  href="{{ href }}"
+                >
                 {{ caption }}
               </a>
             </li>
@@ -55,6 +56,7 @@
         <p class="card-text"><small class="text-muted align-text-bottom"></small></p>
     </div>
     
+    <!-- Cooperator just need to update the following part based on aggreement on base.html -->
     <div id="content">
       {% block content %}{% endblock %}
     </div>

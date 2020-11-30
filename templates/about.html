@@ -1,9 +1,15 @@
+<!-- Extend base.html to inherit basic layout: navbar, footer -->
 {% extends "base.html" %}
+<!-- Set active_page, such that current menu is active automatically without hard code -->
 {% set active_page = "about" %}
+<!-- Set title, template will read title for each html page -->
 {% block title %} {{title}} {% endblock %}
 
+<!-- Each page will render differently according to the data to be displayed. -->
 {% block content %}
 <div class = "container">
+
+    <!-- Try to seperate content from html: write webpage content in aboutPageContents -->
     {% for content in aboutPageContents %}
     <div class = "card border-0">
         <div class="card-body">
@@ -15,5 +21,5 @@
     </div>
     <hr>
     {% endfor %}
-    </div>
+</div>
 {% endblock %}
