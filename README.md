@@ -21,6 +21,11 @@ Other files have been included for Heroku deployment: `requirements.txt`, `Aptfi
 sudo pip install -r requirements.txt
 ```
  
+ ## Tech Stack
+ * Bootstrap for front-end
+ * Jinja2 for html templates
+ * Flask for python framework
+ * Firebase for image storage for style transfer and gallery module
 ## Web application
 To test the app locally, run `flask run` and then you will find a link in your console, use ctrl + click to open that link in your browser.
  
@@ -46,9 +51,9 @@ Report any issue to the GitHub issue tracker.
 * Feng Liu and Qiqi Hou for exposure author to Color Harmonization
  
 ## Inspiration
-[Google Arts & Culture](https://artsandculture.google.com/)
-[How old do I look](https:www.how-old.net/)
-[Make Me zombie](http://makemezombie.com/)
+* [Google Arts & Culture](https://artsandculture.google.com/)
+* [How old do I look](https:www.how-old.net/)
+* [Make Me zombie](http://makemezombie.com/)
  
  
  
