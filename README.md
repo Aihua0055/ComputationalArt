@@ -44,6 +44,8 @@ If successful, you will be able to preview your uploaded image on the same page.
  
 * In the Gallery page, you will see 30 pokemon images in Van Gogh Starry Night style.
 
+## Reference
+* [Color Harmonization Research Paper](https://igl.ethz.ch/projects/color-harmonization/harmonization.pdf)
  
 ## Thanks
 * [image-api](https://github.com/gxercavins/image-api) Our starter code.
