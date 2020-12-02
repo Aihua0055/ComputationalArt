@@ -8,7 +8,8 @@ Main functions:
  
 [A Live Demo](https://computationalartstudio.herokuapp.com/) has been deployed to Heroku.
 Please try it out, and have fun.
-* [Your feedback is valuable for us grow, or join us and we can do it together](Feedback form: https://forms.gle/jSujZZMwUCouGzYg6)
+
+[Your feedback is valuable for us grow, or join us and we can do it together](https://forms.gle/jSujZZMwUCouGzYg6)
  
 ## Getting started
 This project includes three Python files:
