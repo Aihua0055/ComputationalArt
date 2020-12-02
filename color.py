@@ -1,6 +1,6 @@
 
 import os
-from flask import Flask, render_template, Blueprint, request
+from flask import Flask, render_template, Blueprint, request, current_app
 from wheel import harmonize_image
 
 # Use Blueprint to create color harmonization component.
@@ -60,7 +60,11 @@ def colorhar():
         kwargs['result_image_name']= image_fpath_harmonized
 
         # pass harmony score to templage: the lower the harmony score, the more harmony the color is .
-        har_result = harmonize_image(destination, image_fpath_harmonized)
+        img_score_size = 30.
+        img_ret_size = 300.
+        current_app.logger.info(f"The shorter edge will be resize to {img_ret_size}.")
+        har_result = harmonize_image(destination, image_fpath_harmonized, img_score_size=img_score_size, img_ret_size=img_ret_size)
+        
         # append har_result to Kwargs
         kwargs.update(har_result)
 

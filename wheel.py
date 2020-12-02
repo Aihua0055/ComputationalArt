@@ -206,12 +206,12 @@ def load_resized_hsv_img(fname, shortest_length=30.):
 
 
 # Web API
-def harmonize_image(fpath, fpath_har):
+def harmonize_image(fpath, fpath_har, img_score_size=30., img_ret_size=300.):
     # Load an image from local file system.
     # Small image for calculating score efficiently.
-    img_hsv, img_size = load_resized_hsv_img(fpath, shortest_length=30.)
+    img_hsv, img_size = load_resized_hsv_img(fpath, shortest_length=img_score_size)
     # To return larger image at the end.
-    img_hsv_large, _ = load_resized_hsv_img(fpath, shortest_length=300.)
+    img_hsv_large, _ = load_resized_hsv_img(fpath, shortest_length=img_ret_size)
 
     # Calculate score, only type X.
     wheel = HarmonicWheel(type='X')
