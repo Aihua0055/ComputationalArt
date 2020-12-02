@@ -36,23 +36,23 @@ def colorhar():
 
         # retrieve file from html file-picker
         upload = request.files.getlist("file")[0]
-        print("File name: {}".format(upload.filename))
+        current_app.logger.debug(f"File name: {upload.filename}")
         filename = upload.filename
 
         # file support verification
         ext = os.path.splitext(filename)[1]
-        print("ext=", ext)
+        current_app.logger.debug(f"ext={ext}")
         if ext in ALLOWED_EXTENSIONS:
-            print("File accepted")
+            current_app.logger.debug("File accepted")
         else:
             return render_template("error.html", message="The selected file is not supported"), 400
 
         # save file
         destination = os.path.join(uploads_dir, filename)
-        print("File saved to to:", destination)
+        current_app.logger.debug(f"File saved to to:{destination}")
         upload.save(destination)
         kwargs['image_name'] = destination
-        print("destination=", destination)
+        current_app.logger.debug(f"destination={destination}")
 
         # pass path of result image to template
         image_fpath_harmonized = os.path.join(results_dir, filename)
@@ -62,7 +62,7 @@ def colorhar():
         # pass harmony score to templage: the lower the harmony score, the more harmony the color is .
         img_score_size = 30.
         img_ret_size = 300.
-        current_app.logger.info(f"The shorter edge will be resize to {img_ret_size}.")
+        current_app.logger.debug(f"The shorter edge will be resize to {img_ret_size}.")
         har_result = harmonize_image(destination, image_fpath_harmonized, img_score_size=img_score_size, img_ret_size=img_ret_size)
         
         # append har_result to Kwargs
