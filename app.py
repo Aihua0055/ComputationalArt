@@ -36,9 +36,9 @@ def home():
     kwargs = {
         'title': 'Home',
         'jumbotron': {
-            "header": "Image Playground",
-            "bg_image": url_for('static', filename='/images/bg1450496.jpg'),
-            "text": " "
+            "header": "Welcome to Computational Art Studio!",
+            "bg_image": url_for('static', filename='/images/1182_650.jpg'),
+            "text": "Here, you can style transfer and color harmonize your images. "
         },
         'homePageContents': [{
             'Title': "Style Transer",
@@ -49,7 +49,7 @@ def home():
         },
             {
             "Title": "Color Harmonization",
-            "Text": "In color theory, color harmony refers to the property that certain aesthetically pleasing color combinations have. These combinations create pleasing contrasts and consonances that are said to be harmonious. These combinations can be of complementary colors, split-complementary colors, color triads, or analogous colors. Color harmony has been a topic of extensive study throughout history, but only since the Renaissance and the Scientific Revolution has it seen extensive codification. Artists and designers make use of these harmonies in order to achieve certain moods or aesthetics.--Wikipedia Neural Style Transfer",
+            "Text": "In color theory, color harmony refers to the property that certain aesthetically pleasing color combinations have. These combinations create pleasing contrasts and consonances that are said to be harmonious. These combinations can be of complementary colors, split-complementary colors, color triads, or analogous colors. Color harmony has been a topic of extensive study throughout history, but only since the Renaissance and the Scientific Revolution has it seen extensive codification. Artists and designers make use of these harmonies in order to achieve certain moods or aesthetics.--Wikipedia Harmony (color)",
             "imagePath": url_for('static', filename='/images/colorHar.png'),
             "Link": "/colorhar",
             "Action": "+ Go Color Harmonization"
@@ -74,8 +74,8 @@ def styletransfer():
         'title': 'Style Transfer',
         'jumbotron': {
             "header": "Style Transfer",
-            "bg_image": "static/images/styleTransfer.jpeg",
-            "text": "Research paper: https://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf"
+            "bg_image": "static/images/1182_650.jpg",
+            "text": "Magic is happening here. "
 
         }
     }
@@ -137,7 +137,7 @@ def gallery():
         'title': 'Gallery',
         'jumbotron': {
             "header": "Computational Art Gallery",
-            "bg_image": "static/images/bg1450496.jpg",
+            "bg_image": "static/images/1182_650.jpg",
             "text": "Style Transfer selected images from PokéAPI"
 
         },
@@ -152,21 +152,21 @@ def about():
         'title': 'About',
         'jumbotron': {
             "header": "AI & Art",
-            "bg_image": "static/images/bg1450496.jpg",
+            "bg_image": "static/images/1182_650_gallery.jpg",
             "text": ""
         },
         'aboutPageContents': [{
-            'Title': "AI & Art",
-            "Text": " Text for AI & Art"
-
-        },
-            {
-            "Title": "References",
+            'Title': "Can AI create art and music?",
             "Text": " "
 
         },
             {
-            "Title": "Thanks",
+            "Title": "Can web technologies make art and music accessible to everyone in every corner of the world?",
+            "Text": " "
+
+        },
+            {
+            "Title": "Be patient, it takes time!",
             "Text": ""
 
         }
