@@ -23,6 +23,7 @@ config = {
 }
 
 # Get started in development mode: FLASK_ENV=development FLASK_APP=app.py python -m flask run
+# push to heroku :git push heroku main
 firebase = pyrebase.initialize_app(config)
 
 # Firebase storage for Style Transfer.
