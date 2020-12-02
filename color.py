@@ -15,9 +15,9 @@ def colorhar():
     kwargs = {
         'title': 'Color Harmonization',
         'jumbotron': {
-            "header": "Color Harmonization",
-            "bg_image": "static/images/colorHarJ.jpg",
-            "text": "Research paper:https://igl.ethz.ch/projects/color-harmonization/harmonization.pdf"
+            "header": "Harmonize my photos!",
+            "bg_image": "static/images/1182_650.jpg",
+            "text": "Thanks to the wonderful work of these researchers:https://igl.ethz.ch/projects/color-harmonization/harmonization.pdf"
         }
     }
     
@@ -69,3 +69,8 @@ def colorhar():
         kwargs.update(har_result)
 
         return render_template('colorhar.html', **kwargs)
+
+# Ajax example video: https://www.youtube.com/watch?v=IZWtHsM3Y5A
+@colorhar_page.route('/colorhar/process', methods=['POST'])
+def colorhar_process():
+    pass
