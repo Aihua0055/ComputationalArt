@@ -188,15 +188,15 @@ class HarmonicWheel:
 
 
 # Web API
-def load_resized_hsv_img(fname):
+def load_resized_hsv_img(fname, shortest_length=30.):
     img_orig = cv2.imread(fname)
 
     # H * 2 = degree [0, 360]
     # Source: https://docs.opencv.org/trunk/de/d25/imgproc_color_conversions.html#color_convert_rgb_hsv
     h, w, _ = img_orig.shape
-    shortest_length = 30.
     scale_factor = min(h/shortest_length, w/shortest_length)
-    # scale_factor = 1
+    # Avoid enlarging images.
+    scale_factor = max(1, scale_factor)
     h_new = int(h / scale_factor)
     w_new = int(w / scale_factor)
     img_size = h_new * w_new
@@ -208,7 +208,10 @@ def load_resized_hsv_img(fname):
 # Web API
 def harmonize_image(fpath, fpath_har):
     # Load an image from local file system.
-    img_hsv, img_size = load_resized_hsv_img(fpath)
+    # Small image for calculating score efficiently.
+    img_hsv, img_size = load_resized_hsv_img(fpath, shortest_length=30.)
+    # To return larger image at the end.
+    img_hsv_large, _ = load_resized_hsv_img(fpath, shortest_length=300.)
 
     # Calculate score, only type X.
     wheel = HarmonicWheel(type='X')
@@ -226,7 +229,7 @@ def harmonize_image(fpath, fpath_har):
 
     # Adjust the color.
     wheel.update_alpha(min_alpha)
-    img_hsv_har = wheel.harmonize_image(img_hsv)
+    img_hsv_har = wheel.harmonize_image(img_hsv_large)
     img_bgr_har = cv2.cvtColor(img_hsv_har, cv2.COLOR_HSV2BGR)
 
     cv2.imwrite(fpath_har, img_bgr_har)
