@@ -1,5 +1,5 @@
 # Computational Art Studio
-Computational Art Studio written in Python.Use Flask as web Framework.Use Deep AI style transfer API for Style Transfer.
+Computational Art Studio written in Python, Flask as web Framework,Deep AI style transfer API for Style Transfer.
 
 Main functions:
 * Style Transfer 
