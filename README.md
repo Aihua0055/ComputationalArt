@@ -3,7 +3,7 @@ Computational Art Studio written in Python.Use Flask as web Framework.Use Deep A
 
 Main functions:
 * Style Transfer 
-* Color Harmonization [Colour Harmony a video on Youtube](https://www.youtube.com/watch?v=4LhcNbFMkTw)
+* Color Harmonization [Colour Harmony a video on Youtube](https://www.youtube.com/watch?v=4LhcNbFMkTw) [A Youtube video about color theory](https://www.youtube.com/watch?v=_2LLXnUdUIc)
 * Gallery of Style Transfer.
  
 [A Live Demo](https://computationalartstudio.herokuapp.com/) has been deployed to Heroku.
