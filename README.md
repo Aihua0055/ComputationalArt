@@ -49,7 +49,7 @@ If successful, you will be able to preview your uploaded image on the same page.
 
 ## Reference
 * [Color Harmonization Research Paper](https://igl.ethz.ch/projects/color-harmonization/harmonization.pdf)
-* [A youtube video showing how color harmonization research paper works](https://www.youtube.com/watch?v=DvrUYtLju4Y)
+* [A youtube video showing color harmonization technique](https://www.youtube.com/watch?v=DvrUYtLju4Y)
  
 ## Thanks
 * Our starter code [image-api](https://github.com/gxercavins/image-api) .
