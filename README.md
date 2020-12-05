@@ -34,8 +34,8 @@ sudo pip install -r requirements.txt
  * Jinja2 for html templates
  * Flask for web framework
  * Firebase for image storage for style transfer and gallery module
-## Web application
-To test the app locally, run `flask run` and then you will find a link in your console, use ctrl + click to open that link in your browser.
+## Run local
+To test the app locally, run `FLASK_ENV=development FLASK_APP=app.py python -m flask run` and then you will find a link in your console, use ctrl + click to open that link in your browser.
  
 Use the `Browse` button to upload the desired image.
  
