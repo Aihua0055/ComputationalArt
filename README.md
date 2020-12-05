@@ -51,7 +51,7 @@ If successful, you will be able to preview your uploaded image on the same page.
 * [Color Harmonization Research Paper](https://igl.ethz.ch/projects/color-harmonization/harmonization.pdf)
  
 ## Thanks
-* [image-api](https://github.com/gxercavins/image-api) Our starter code.
+* Our starter code [image-api](https://github.com/gxercavins/image-api) .
 * [Deep AI](https://deepai.org/machine-learning-model/fast-style-transfer)
 * [Flask official documentation](https://flask.palletsprojects.com/en/1.1.x/)
 * [Jinja2 documentation](https://jinja.palletsprojects.com/en/2.11.x/)
