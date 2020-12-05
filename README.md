@@ -5,6 +5,7 @@ Main functions:
 * Style Transfer 
 * Color Harmonization [Colour Harmony a video on Youtube](https://www.youtube.com/watch?v=4LhcNbFMkTw) | [A Youtube video about color theory](https://www.youtube.com/watch?v=_2LLXnUdUIc)
 * Gallery of Style Transfer.
+* About page sparks thinking about AI and art.
  
 [A Live Demo](https://computationalartstudio.herokuapp.com/) has been deployed to Heroku.
 Please try it out, and have fun.
